@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="app/fabric.min.js"></script>
+</head>
+
+<body>
+	<canvas id="annotator" width="300" height="300" style="border:1px solid #aaa"></canvas>
+	<select id="palette" onchange="change()">
+	  <option value="Draw">Draw</option>
+	  <option value="Write">Write</option>
+	  <option value="Clear">Clear</option>
+	</select>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="app/fabric_settings.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.19.0/ramda.min.js"></script>
+    <script src="app/annotator.js"></script>
+</body>
+</html>
