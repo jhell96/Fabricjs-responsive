@@ -38,12 +38,15 @@
       var scaleW = (vpW/annotation.viewportWidth);
       var scaleH = (vpH/annotation.viewportHeight);
       var scaleX = annotation.xCoord * scaleW;
-      var scaleY = annotation.yCoord * scaleH;
+      var scaleY = annotation.yCoord * scaleW; //preserves aspect ratio. Use scaleH to scale independently
+
+      console.log("W: " + scaleW);
+      console.log("X: " + annotation.xCoord + "->" + scaleX);
 
       obj.set('scaleX', scaleW);
-      obj.set('scaleY', scaleH);
+      obj.set('scaleY', scaleW); // preserve aspect ratio. Use scaleH to scale independently 
       obj.set('left', scaleX);
-      obj.set('top', scaleY);
+      obj.set('top', scaleY); 
 
       obj.setCoords();
     }); 

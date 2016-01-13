@@ -1,4 +1,4 @@
-*(function() {
+/*(function() {
 	  var $ = function(id){return document.getElementById(id)};
 
 	  var canvas = this.__canvas = new fabric.Canvas('c', {
